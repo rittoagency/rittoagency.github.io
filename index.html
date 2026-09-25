@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ritto Agency · Estamos en obras</title>
+  <meta name="description" content="Ritto Agency, agencia de marketing. Estamos preparando la web: vuelve pronto.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="logo-ritto.png" type="image/png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: #fff;
+      background: #2b2a26 url("fondo.jpg") center / cover no-repeat fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      position: relative;
+    }
+
+    /* Velo oscuro para que el logo blanco se lea sobre el collage */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(20, 18, 15, 0.45);
+      z-index: 0;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 560px;
+      animation: aparece 1s ease-out both;
+    }
+
+    .logo {
+      width: min(380px, 75vw);
+      height: auto;
+      filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.35));
+    }
+
+    .agency {
+      margin-top: 8px;
+      font-size: 0.95rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    .estado {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 10px 22px;
+      border: 1.5px solid rgba(255, 255, 255, 0.8);
+      border-radius: 999px;
+      font-size: 1rem;
+      backdrop-filter: blur(6px);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .texto {
+      margin-top: 18px;
+      font-size: 1rem;
+      line-height: 1.6;
+      opacity: 0.85;
+    }
+
+    @keyframes aparece {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>
+      <img class="logo" src="logo-ritto.png" alt="Ritto">
+    </h1>
+    <p class="agency">Agency</p>
+
+    <p class="estado">🚧 Estamos en obras</p>
+    <p class="texto">Estamos preparando algo con mucho cariño.<br>Vuelve pronto.</p>
+  </main>
+</body>
+</html>
